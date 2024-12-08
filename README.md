@@ -44,7 +44,7 @@ triggered when the web page is accessed with the vulnerbale Firefox browser.
 
 
 -----
-You can run this experiment on a fedora 36 VM.
+# You can run this experiment on a fedora 36 VM.
 1. download virtual box, install fedora 36 iso, you can download it from [direct download link](https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/36/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-36-1.5.iso) After you finish the installing, remember to remove the fedora-workstation-live-36-1.5.iso from the virtual box. Watch youtube video [here](https://www.youtube.com/watch?v=AZzLpOicH-8). 
 
 2. install fedora 36 on virtual box, with ideally 8gb ram, 100gb storage and 8 cpu cores.
@@ -55,5 +55,5 @@ You can run this experiment on a fedora 36 VM.
 7. clone the git and goes to folder `cd WarpAttack/poc_exploit/`
 8. run ./test4core.sh to run the expirment!!!
 
-## IMPORTANT
+# IMPORTANT
 We don't have a success double fetch attack yet. No stack smashing detected.
