@@ -41,3 +41,19 @@ Please note that if you intend to reproduce the exploit using the same gadget th
 
 We also provide a [web page](./poc_exploit/warpattack1a.html) containing malicious [JS code](./poc_exploit/warpattack1a.js). The exploit will be 
 triggered when the web page is accessed with the vulnerbale Firefox browser.
+
+
+-----
+# You can run this experiment on a fedora 36 VM.
+1. Install virtual box. Download fedora 36 iso, you can download it from [direct fedora 36 iso download link](https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/36/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-36-1.5.iso) After you finish the installing, remember to remove the fedora-workstation-live-36-1.5.iso from the virtual box. Watch youtube video [here](https://www.youtube.com/watch?v=AZzLpOicH-8). 
+
+2. install fedora 36 on virtual box, with ideally 8gb ram, 100gb storage and 8 cpu cores.
+3. inside fedora36 virtual box, download this google drive folder [RPMS of firefox installer](https://drive.google.com/file/d/1rMucTRtS6g2iH0k4Utn5pepJ33YAgFeH/view?usp=drive_link). Extract the RPMS.tar.xz by running `tar -xvf RPMS.tar.xz` in terminal.
+4. remove the old firefox by running `sudo dnf remove firefox` in terminal. 
+5. in terminal run `sudo dnf install /path/to/firefox-106.0.1-1.fc36.x86_64.rpm` to install blaze firefox 106.0.1 which is the vulnerable version with patch.
+6. ***DISABLE ASLR*** by running `echo 0 | sudo tee /proc/sys/kernel/randomize_va_space` in terminal.
+7. clone the git and goes to folder `cd WarpAttack/poc_exploit/`
+8. run ./test4core.sh to run the expirment!!!
+
+# IMPORTANT
+We don't have a success double fetch attack yet. No stack smashing detected.
